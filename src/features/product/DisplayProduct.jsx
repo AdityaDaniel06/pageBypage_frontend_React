@@ -1,5 +1,5 @@
 function DisplayProduct() {
-  return <div>Display</div>;
+  return <></>;
 }
 
 export default DisplayProduct;

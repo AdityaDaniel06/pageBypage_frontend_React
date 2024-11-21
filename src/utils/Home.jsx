@@ -1,9 +1,10 @@
+import DisplayProduct from "../features/product/DisplayProduct";
 import CorouselHome from "./CorouselHome";
 
 function Home() {
   return (
     <>
-      <div>Home</div>
+      <DisplayProduct />
       <CorouselHome />
     </>
   );

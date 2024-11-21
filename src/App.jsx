@@ -19,7 +19,7 @@ const AdminDashboard = lazy(() => import("./features/admin/AdminDashboard"));
 const InsertBook = lazy(() => import("./features/admin/InsertBook"));
 
 import SpinnerFullPage from "./ui/SpinnerFullPage";
-import PageNotFound from "./ui/PageNotFound";
+// import PageNotFound from "./ui/PageNotFound";
 
 function App() {
   return (
@@ -41,7 +41,7 @@ function App() {
             <Route path="/search" element={<Search />} />
             <Route path="/edit/:id" element={<EditBook />} /> */}
             </Route>
-            <Route path="*" element={<PageNotFound />} />
+            {/* <Route path="*" element={<PageNotFound />} /> */}
           </Routes>
         </Suspense>
       </BrowserRouter>
