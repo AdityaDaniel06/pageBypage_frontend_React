@@ -7,7 +7,7 @@ import { MdEmail } from "react-icons/md";
 function Signup() {
   return (
     <div className="mx-auto my-12 h-[440px] w-[970px] border shadow-lg shadow-slate-200 md:flex">
-      <div className="flex-1 bg-gradient-to-r from-green-500"></div>
+      <div className="flex-1 bg-gradient-to-r from-emerald-500"></div>
       <div className="flex-1 px-10 py-8">
         <h2 className="text-center text-xl font-bold">Lets Get Started.</h2>
         <p className="mb-6 text-center">Create an Account.</p>
@@ -20,7 +20,7 @@ function Signup() {
         </div> */}
         <form>
           <div className="flex">
-            {/* <FaUser className="absolute left-0 text-green-700" /> */}
+            {/* <FaUser className="absolute left-0 text-emerald-700" /> */}
             <input
               placeholder="First Name"
               className="mr-5 border-b-2 text-lg focus:outline-none"
@@ -50,13 +50,13 @@ function Signup() {
             <input
               type="checkbox"
               name="confirm"
-              className="mr-1 cursor-pointer appearance-none outline-none default:ring-green-500 checked:bg-green-500 indeterminate:bg-gray-300 focus:ring-green-500"
+              className="mr-1 cursor-pointer appearance-none outline-none default:ring-emerald-500 checked:bg-emerald-500 indeterminate:bg-gray-300 focus:ring-emerald-500"
             />
             I accept the terms of Use & Privacy Policy.
           </p>
           <button
             type="submit"
-            className="mt-4 w-full bg-green-500 py-2.5 text-lg font-semibold tracking-wider text-white hover:bg-green-700"
+            className="mt-4 w-full bg-emerald-500 py-2.5 text-lg font-semibold tracking-wider text-white hover:bg-emerald-700"
           >
             Signup
           </button>

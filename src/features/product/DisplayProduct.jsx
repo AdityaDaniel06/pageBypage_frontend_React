@@ -1,5 +1,14 @@
+import BookCategory from "./BookCategory";
+import PopularCollection from "./PopularCollection";
+
 function DisplayProduct() {
-  return <></>;
+  return (
+    <>
+      <PopularCollection />
+      <BookCategory />
+      <PopularCollection />
+    </>
+  );
 }
 
 export default DisplayProduct;

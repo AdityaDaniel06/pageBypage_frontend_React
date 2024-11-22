@@ -9,7 +9,7 @@ function AdminDashboard() {
       <div className="flex">
         <Sidebar />
         <div className="flex flex-1 flex-col">
-          <header className="bg-green-600 p-4 text-white">
+          <header className="bg-emerald-600 p-4 text-white">
             <h1 className="text-2xl">Admin Dashboard</h1>
           </header>
           <Outlet />

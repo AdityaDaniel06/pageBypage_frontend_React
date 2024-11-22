@@ -11,7 +11,7 @@ import {
 function AreaGraph() {
   return (
     <div className="mt-6 w-full pb-3">
-      <h2 className="mb-4 pt-4 text-center text-lg font-bold text-green-600">
+      <h2 className="mb-4 pt-4 text-center text-lg font-bold text-emerald-600">
         Daily Growth
       </h2>
       <ResponsiveContainer height={250} width="95%">

@@ -20,7 +20,7 @@ function PChart() {
   ];
   return (
     <div className="w-full md:w-1/2">
-      <h2 className="mb-4 text-center text-lg font-bold text-green-600">
+      <h2 className="mb-4 text-center text-lg font-bold text-emerald-600">
         Age Group of Readers
       </h2>
       <ResponsiveContainer width="100%" aspect={1}>

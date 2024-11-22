@@ -21,7 +21,9 @@ const data = [
 function BGraph() {
   return (
     <div className="w-1/2">
-      <h2 className="mb-4 text-center text-lg font-bold text-green-600">Monthly Financials</h2>
+      <h2 className="mb-4 text-center text-lg font-bold text-emerald-600">
+        Monthly Financials
+      </h2>
       <ResponsiveContainer width="80%" aspect={1}>
         <BarChart
           data={data}

@@ -12,19 +12,19 @@ function MyCharts() {
     <>
       <main className="flex-1 bg-gray-100 p-6">
         <div className="flex justify-end gap-4">
-          <button className="rounded-sm bg-slate-200 px-3 py-2 text-xs font-semibold text-green-500 hover:bg-green-500 hover:text-white">
+          <button className="rounded-sm bg-slate-200 px-3 py-2 text-xs font-semibold text-emerald-500 hover:bg-emerald-500 hover:text-white">
             Last 7 Days
           </button>
-          <button className="rounded-sm bg-slate-200 px-3 py-2 text-xs font-semibold text-green-500 hover:bg-green-500 hover:text-white">
+          <button className="rounded-sm bg-slate-200 px-3 py-2 text-xs font-semibold text-emerald-500 hover:bg-emerald-500 hover:text-white">
             Last 30 Days
           </button>
-          <button className="rounded-sm bg-slate-200 px-3 py-2 text-xs font-semibold text-green-500 hover:bg-green-500 hover:text-white">
+          <button className="rounded-sm bg-slate-200 px-3 py-2 text-xs font-semibold text-emerald-500 hover:bg-emerald-500 hover:text-white">
             Last 90 Days
           </button>
         </div>
         <div className="mt-3 flex justify-around space-x-6 bg-slate-200 p-4">
           <div className="bg-slate-300 px-4 py-3 hover:shadow-lg">
-            <h2 className="text-lg font-semibold text-green-500">
+            <h2 className="text-lg font-semibold text-emerald-500">
               Active Users
             </h2>
             <div className="flex gap-2">
@@ -39,7 +39,7 @@ function MyCharts() {
             <p></p>
           </div>
           <div className="bg-slate-300 px-4 py-3 hover:shadow-lg">
-            <h2 className="text-lg font-semibold text-green-500">Orders</h2>
+            <h2 className="text-lg font-semibold text-emerald-500">Orders</h2>
             <div className="flex gap-2">
               <span className="m-1 rounded-full bg-purple-200 p-2">
                 <BsSuitcaseLg className="text-2xl text-purple-500" />
@@ -51,10 +51,10 @@ function MyCharts() {
             </div>
           </div>
           <div className="bg-slate-300 px-4 py-3 hover:shadow-lg">
-            <h2 className="text-lg font-semibold text-green-500">Revenue</h2>
+            <h2 className="text-lg font-semibold text-emerald-500">Revenue</h2>
             <div className="flex gap-2">
-              <span className="m-1 rounded-full bg-green-100 p-2">
-                <GiMoneyStack className="text-2xl text-green-500" />
+              <span className="m-1 rounded-full bg-emerald-100 p-2">
+                <GiMoneyStack className="text-2xl text-emerald-500" />
               </span>
               <span>
                 <p className="text-sm text-slate-500">Last 30 days</p>
@@ -63,7 +63,7 @@ function MyCharts() {
             </div>
           </div>
           <div className="bg-slate-300 px-4 py-3 hover:shadow-lg">
-            <h2 className="text-lg font-semibold text-green-500">Returns</h2>
+            <h2 className="text-lg font-semibold text-emerald-500">Returns</h2>
             <div className="flex gap-2">
               <span className="m-1 rounded-full bg-orange-100 p-2">
                 <TbTruckReturn className="text-2xl text-orange-400" />
@@ -75,7 +75,9 @@ function MyCharts() {
             </div>
           </div>
           <div className="bg-slate-300 px-4 py-3 hover:shadow-lg">
-            <h2 className="text-lg font-semibold text-green-500">Complaints</h2>
+            <h2 className="text-lg font-semibold text-emerald-500">
+              Complaints
+            </h2>
             <div className="flex gap-2">
               <span className="m-1 rounded-full bg-red-100 p-2">
                 <LuThumbsDown className="text-2xl text-red-500" />

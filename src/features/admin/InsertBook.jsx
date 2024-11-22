@@ -223,7 +223,7 @@ function InsertBook() {
               Add Image
             </label>
             <input
-              className="w-72 bg-slate-200 text-sm text-stone-700 file:mr-5 file:border-2 file:bg-green-500 file:px-5 file:text-green-600 hover:file:cursor-pointer"
+              className="w-72 bg-slate-200 text-sm text-stone-700 file:mr-5 file:border-2 file:bg-emerald-500 file:px-5 file:text-emerald-600 hover:file:cursor-pointer"
               id="img"
               name="img"
               type="file"
@@ -232,7 +232,7 @@ function InsertBook() {
           </div>
           <button
             type="submit"
-            className="rounded-md bg-green-600 px-3.5 py-2 font-medium text-slate-50 hover:text-slate-100 hover:shadow-xl"
+            className="rounded-md bg-emerald-600 px-3.5 py-2 font-medium text-slate-50 hover:text-slate-100 hover:shadow-xl"
             onClick={handleSubmit}
           >
             Store in Database
@@ -240,7 +240,7 @@ function InsertBook() {
           &nbsp; &nbsp;
           <button
             type="reset"
-            className="rounded-md border-green-100 bg-slate-200 px-3.5 py-2 font-medium text-green-600 hover:shadow-xl"
+            className="rounded-md border-emerald-100 bg-slate-200 px-3.5 py-2 font-medium text-emerald-600 hover:shadow-xl"
           >
             Cancel
           </button>
