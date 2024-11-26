@@ -3,7 +3,7 @@ import { FcGoogle } from "react-icons/fc";
 
 function Login() {
   return (
-    <div className="mx-auto my-12 h-[440px] w-[970px] border shadow-lg shadow-slate-200 md:flex">
+    <div className="mx-auto my-12 h-[500px] w-[970px] border shadow-lg shadow-slate-200 md:flex">
       <div className="flex-1 px-10 py-8">
         <h2 className="text-center text-xl font-bold">Welcome back!</h2>
         <p className="text-center">Choose the way, you wanna Login.</p>

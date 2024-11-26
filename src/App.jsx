@@ -19,6 +19,7 @@ const AdminDashboard = lazy(() => import("./features/admin/AdminDashboard"));
 const InsertBook = lazy(() => import("./features/admin/InsertBook"));
 
 import SpinnerFullPage from "./ui/SpinnerFullPage";
+import BookFiction from "./features/product/BookFiction";
 // import PageNotFound from "./ui/PageNotFound";
 
 function App() {
@@ -31,15 +32,15 @@ function App() {
               <Route index element={<Home />} />
               <Route path="user/login" element={<Login />} />
               <Route path="user/signup" element={<Signup />} />
+              <Route path="fiction" element={<BookFiction />} />
             </Route>
           </Routes>
           <Routes>
             <Route path="/admin" element={<AdminDashboard />}>
               <Route index element={<MyCharts />} />
               <Route path="insert" element={<InsertBook />} />
-              {/* <Route path="/display" element={<Display />} />
-            <Route path="/search" element={<Search />} />
-            <Route path="/edit/:id" element={<EditBook />} /> */}
+
+              {/* <Route path="/edit/:id" element={<EditBook />} /> */}
             </Route>
             {/* <Route path="*" element={<PageNotFound />} /> */}
           </Routes>

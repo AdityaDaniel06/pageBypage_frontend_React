@@ -1,33 +1,41 @@
+// import img01 from "../../assets/images/comic_bg.jpg";
+import imgComic from "../../assets/images/bang01.png";
+import imgBoardGames from "../../assets/images/boardgame01.jpg";
+import imgChildren from "../../assets/images/children01.jpg";
+import imgReligion from "../../assets/images/religious01.jpg";
+import imgGifts from "../../assets/images/gifts01.jpg";
+import business from "../../assets/images/business.webp";
+
 function BookCategories() {
   const categories = [
     {
       title: "Comics Books",
-      img: "",
-      bgColor: "bg-blue-500",
+      img: imgComic,
+      bgColor: "bg-gold-200",
     },
     {
       title: "Board Games",
-      img: "",
-      bgColor: "bg-gray-200",
+      img: imgBoardGames,
+      bgColor: "bg-pink-300",
     },
     {
       title: "Business & Money Books",
-      img: "",
+      img: business,
       bgColor: "bg-gray-400",
     },
     {
       title: "Children's Books",
-      img: "",
+      img: imgChildren,
       bgColor: "bg-orange-500",
     },
     {
-      title: "Travel Books",
-      img: "",
-      bgColor: "bg-teal-500",
+      title: "Religious Books",
+      img: imgReligion,
+      bgColor: "bg-teal-200",
     },
     {
-      title: "Gift Cards",
-      img: "",
+      title: "Gift & Cards",
+      img: imgGifts,
       bgColor: "bg-yellow-500",
     },
   ];
@@ -44,11 +52,11 @@ function BookCategories() {
             <img
               src={category.img}
               alt={category.title}
-              className="absolute inset-0 h-full w-full object-cover opacity-80"
+              className="absolute inset-0 h-full w-full object-cover opacity-70"
             />
 
             {/* Overlay Text */}
-            <div className="absolute inset-0 flex flex-col justify-between p-6 text-white">
+            <div className="absolute inset-0 flex flex-col justify-between p-6 text-slate-800">
               <h2 className="text-xl font-bold">{category.title}</h2>
               <div className="self-end text-lg font-semibold">
                 <span>&gt;</span>

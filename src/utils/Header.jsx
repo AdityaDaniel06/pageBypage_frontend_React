@@ -1,8 +1,21 @@
 import { Link } from "react-router-dom";
+import { FaRegHeart } from "react-icons/fa";
+import { FaTruckFast } from "react-icons/fa6";
+import { BsCart4 } from "react-icons/bs";
+import { RiAdminLine } from "react-icons/ri";
+import { Tooltip } from "react-tooltip";
 
 function Header() {
   return (
     <>
+      {/* NotificationBar */}
+      <div className="m-0 bg-zinc-600 px-3 text-xs text-white">
+        <p className="py-0.5">
+          <span>Do More, Be More</span> |&nbsp;<span>Singapore</span> |&nbsp;
+          <span>UAE</span> |&nbsp;<span>Partner With Us</span> |&nbsp;
+          <span>Contact Us</span>
+        </p>
+      </div>
       {/* Top Header */}
       <div className="flex items-center justify-between bg-emerald-500 px-6 py-3">
         <h1 className="cursor-pointer text-2xl font-bold text-white">
@@ -16,12 +29,42 @@ function Header() {
         />
         {/* Additional Links */}
         <div className="hidden items-center space-x-6 text-white md:flex">
-          <span className="hover: cursor-pointer">Track Order</span>
-          <span className="cursor-pointer">Wishlist</span>
-          <span className="cursor-pointer">Cart</span>
+          <span className="hover: cursor-pointer">
+            <Link
+              to="trackorder"
+              className="hover:text-gray-300"
+              data-tooltip-id="trackorder"
+              data-tooltip-content="Track Order"
+            >
+              <FaTruckFast size={22} />
+              <Tooltip id="trackorder" className="bg-zinc-500" />
+            </Link>
+          </span>
+          <span className="cursor-pointer">
+            <Link
+              to="wishlist"
+              className="hover:text-gray-300"
+              data-tooltip-id="myWish"
+              data-tooltip-content="Wishlist"
+            >
+              <FaRegHeart className="" size={22} />
+              <Tooltip id="myWish" className="bg-zinc-500" />
+            </Link>
+          </span>
+          <span className="cursor-pointer">
+            <Link
+              to="cart"
+              className="hover:text-gray-300"
+              data-tooltip-id="myCart"
+              data-tooltip-content="My Cart"
+            >
+              <BsCart4 size={22} />
+              <Tooltip id="myCart" className="bg-zinc-500" />
+            </Link>
+          </span>
           <span>
-            <Link to="admin" className="hover:text-gray-200">
-              Admin
+            <Link to="admin" className="hover:text-gray-300">
+              <RiAdminLine size={22} />
             </Link>
           </span>
         </div>
@@ -57,6 +100,9 @@ function Header() {
             </li>
             <li className="cursor-pointer text-lg font-medium transition hover:text-emerald-800">
               New Arrival
+            </li>
+            <li className="cursor-pointer text-lg font-medium transition hover:text-emerald-800">
+              E-Book
             </li>
             <li className="cursor-pointer text-lg font-medium transition hover:text-emerald-800">
               Stationary & Gifts
