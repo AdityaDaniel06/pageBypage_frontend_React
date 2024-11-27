@@ -1,12 +1,11 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import BookItem from "./BookItem";
-
-function BookFiction() {
+function BookKids() {
   const [bookData, setbookData] = useState([]);
 
   const fetchBooks = () => {
-    let api = "http://localhost:8080/product/showbooks/?category=Fiction";
+    let api = "http://localhost:8080/product/showbooks/?category=Kids";
     axios.get(api).then((response) => {
       setbookData(response.data.data);
       console.log(response.data.data);
@@ -17,10 +16,17 @@ function BookFiction() {
     fetchBooks();
   }, []);
 
+  if (bookData.length === 0)
+    return (
+      <h3 className="my-8 text-center text-3xl">
+        No Books Available right now.
+      </h3>
+    );
+
   return (
     <>
       <h2 className="mt-7 text-center text-3xl font-medium text-slate-800">
-        Fiction Books
+        Children&apos;s Books
       </h2>
       <div className="flex flex-grow flex-row flex-wrap">
         {bookData.map((book) => (
@@ -30,5 +36,4 @@ function BookFiction() {
     </>
   );
 }
-
-export default BookFiction;
+export default BookKids;

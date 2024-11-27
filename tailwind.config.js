@@ -8,6 +8,9 @@ export default {
         screen: "100dvh",
       },
     },
+    fontFamily: {
+      sans: ["Roboto", "sans-serif"],
+    },
   },
   plugins: [flowbite.plugin()],
 };

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { FaRegHeart } from "react-icons/fa";
 import { FaTruckFast } from "react-icons/fa6";
 import { BsCart4 } from "react-icons/bs";
@@ -19,7 +19,7 @@ function Header() {
       {/* Top Header */}
       <div className="flex items-center justify-between bg-emerald-500 px-6 py-3">
         <h1 className="cursor-pointer text-2xl font-bold text-white">
-          🧾 Page By Page
+          <Link to="/">🧾 Page By Page</Link>
         </h1>
         {/* Search Bar */}
         <input
@@ -84,34 +84,34 @@ function Header() {
         <nav>
           <ul className="flex flex-wrap justify-center gap-8 text-emerald-600">
             <li className="cursor-pointer text-lg font-medium transition hover:text-emerald-800">
-              Fiction
+              <NavLink to="fiction">Fiction</NavLink>
             </li>
             <li className="cursor-pointer text-lg font-medium transition hover:text-emerald-800">
-              Non-Fiction
+              <NavLink to="nonfiction">Non-Fiction</NavLink>
             </li>
             <li className="cursor-pointer text-lg font-medium transition hover:text-emerald-800">
-              Kids
+              <NavLink to="kids">Kids</NavLink>
             </li>
             <li className="cursor-pointer text-lg font-medium transition hover:text-emerald-800">
-              Comics
+              <NavLink to="comic">Comics</NavLink>
             </li>
             <li className="cursor-pointer text-lg font-medium transition hover:text-emerald-800">
-              Best Seller
+              <NavLink to="bestseller">Best Seller</NavLink>
             </li>
             <li className="cursor-pointer text-lg font-medium transition hover:text-emerald-800">
-              New Arrival
+              <NavLink to="newarrival">New Arrival</NavLink>
             </li>
             <li className="cursor-pointer text-lg font-medium transition hover:text-emerald-800">
-              E-Book
+              <NavLink to="ebooks">E-Books</NavLink>
             </li>
             <li className="cursor-pointer text-lg font-medium transition hover:text-emerald-800">
-              Stationary & Gifts
+              <NavLink to="stationary"> Stationary & Gifts</NavLink>
             </li>
             <li className="cursor-pointer text-lg font-medium transition hover:text-emerald-800">
-              Board Games
+              <NavLink to="boardgames">Board Games</NavLink>
             </li>
             <li className="cursor-pointer text-lg font-medium transition hover:text-emerald-800">
-              Locate Store
+              <NavLink to="locatestore">Locate Store</NavLink>
             </li>
           </ul>
         </nav>

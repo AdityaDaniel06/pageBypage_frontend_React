@@ -1,6 +1,7 @@
 import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { lazy, Suspense } from "react";
+import SpinnerFullPage from "./ui/SpinnerFullPage";
 
 // import Home from "./utils/Home";
 // import Login from "./features/user/Login";
@@ -10,16 +11,20 @@ const Home = lazy(() => import("./utils/Home"));
 const Login = lazy(() => import("./features/user/Login"));
 const Signup = lazy(() => import("./features/user/Signup"));
 const AppLayout = lazy(() => import("./utils/AppLayout"));
+const BookFiction = lazy(() => import("./features/product/BookFiction"));
 
-// import AdminDashboard from "./features/admin/AdminDashboard";
-// import InsertBook from "./features/admin/InsertBook";
-// import MyCharts from "./features/admin/charts/MyCharts";
 const MyCharts = lazy(() => import("./features/admin/charts/MyCharts"));
 const AdminDashboard = lazy(() => import("./features/admin/AdminDashboard"));
 const InsertBook = lazy(() => import("./features/admin/InsertBook"));
 
-import SpinnerFullPage from "./ui/SpinnerFullPage";
-import BookFiction from "./features/product/BookFiction";
+import BookNonFiction from "./features/product/BookNonFiction";
+import BookKids from "./features/product/BookKids";
+import BookComic from "./features/product/BookComic";
+import BestSeller from "./features/product/BestSeller";
+import NewArrival from "./features/product/NewArrival";
+import Stationary from "./features/product/Stationary";
+import Boardgames from "./features/product/Boardgames";
+import LocateStore from "./features/product/LocateStore";
 // import PageNotFound from "./ui/PageNotFound";
 
 function App() {
@@ -33,6 +38,14 @@ function App() {
               <Route path="user/login" element={<Login />} />
               <Route path="user/signup" element={<Signup />} />
               <Route path="fiction" element={<BookFiction />} />
+              <Route path="nonfiction" element={<BookNonFiction />} />
+              <Route path="kids" element={<BookKids />} />
+              <Route path="comic" element={<BookComic />} />
+              <Route path="bestseller" element={<BestSeller />} />
+              <Route path="newarrival" element={<NewArrival />} />
+              <Route path="stationary" element={<Stationary />} />
+              <Route path="boardgames" element={<Boardgames />} />
+              <Route path="locatestore" element={<LocateStore />} />
             </Route>
           </Routes>
           <Routes>
