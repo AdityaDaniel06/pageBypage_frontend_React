@@ -41,6 +41,8 @@ const bookBinding = [
   "Hardcover with Spine",
   "Special Edition",
 ];
+
+// const bookLanguage = ["English", "Hindi", "Other"];
 function InsertBook() {
   const [input, setInput] = useState({});
   const [bookImg, setBookImg] = useState();
@@ -51,7 +53,7 @@ function InsertBook() {
     let name = e.target.name;
     let value = e.target.value;
     setInput((values) => ({ ...values, [name]: value }));
-    // console.log(input);
+    console.log(input);
   };
   function handleImage(e) {
     setBookImg(e.target.files[0]);
@@ -74,13 +76,14 @@ function InsertBook() {
       if (response) {
         setIsLoading(false);
         let api1 = "http://localhost:8080/product/addProduct";
-        // console.log("aaaaaaa", { ...input, image: response.data.url });
+        console.log("aaaaaaa", { ...input, image: response.data.url });
         axios
           .post(api1, { ...input, image: response.data.url })
           .then((res) => {});
       } else {
         // setError(true);
         setIsLoading(false);
+        console.log("aammmmmmmm", { ...input, image: response.data.url });
         alert("Failed to upload image.");
       }
     } catch (e) {
@@ -98,7 +101,7 @@ function InsertBook() {
       <p className="mb-5 ml-6 text-2xl font-semibold">Insert Book Details</p>
       <form className="mx-5 my-2">
         <div className="my-3 flex gap-5">
-          <label htmlFor="title" className="w-40">
+          <label htmlFor="title" className="w-52 p-2">
             Enter Title
           </label>
           <input
@@ -106,32 +109,32 @@ function InsertBook() {
             id="title"
             name="title"
             required
-            className="w-72 rounded-sm border-2 border-gray-500 focus:border-green-600 focus:outline-none focus:ring focus:ring-lime-600 focus:ring-opacity-50"
+            className="w-80 rounded-sm border-2 border-gray-500 focus:border-green-600 focus:outline-none focus:ring focus:ring-lime-600 focus:ring-opacity-50"
             value={input.title}
             onChange={handleInput}
           />
         </div>
         <div className="my-3 flex gap-5">
-          <label htmlFor="author" className="w-40">
+          <label htmlFor="author" className="w-52 p-2">
             Enter Author
           </label>
           <input
             type="text"
             id="author"
             name="author"
-            className="w-72 rounded-sm border-2 border-gray-500 focus:border-green-600 focus:outline-none focus:ring focus:ring-lime-600 focus:ring-opacity-50"
+            className="w-80 rounded-sm border-2 border-gray-500 focus:border-green-600 focus:outline-none focus:ring focus:ring-lime-600 focus:ring-opacity-50"
             required
             value={input.author}
             onChange={handleInput}
           />
         </div>
         <div className="my-3 flex gap-5">
-          <label htmlFor="genre" className="w-40">
+          <label htmlFor="genre" className="w-52 p-2">
             Enter Genre
           </label>
           <input
             type="text"
-            className="w-72 rounded-sm border-2 border-gray-500 focus:border-green-600 focus:outline-none focus:ring focus:ring-lime-600 focus:ring-opacity-50"
+            className="w-80 rounded-sm border-2 border-gray-500 focus:border-green-600 focus:outline-none focus:ring focus:ring-lime-600 focus:ring-opacity-50"
             id="genre"
             name="genre"
             required
@@ -140,25 +143,25 @@ function InsertBook() {
           />
         </div>
         <div className="my-3 flex gap-5">
-          <label htmlFor="year" className="w-40">
+          <label htmlFor="year" className="w-52 p-2">
             Enter Publication Year
           </label>
           <input
             type="number"
             id="year"
             name="year"
-            className="w-72 rounded-sm border-2 border-gray-500 focus:border-green-600 focus:outline-none focus:ring focus:ring-lime-600 focus:ring-opacity-50"
+            className="w-80 rounded-sm border-2 border-gray-500 focus:border-green-600 focus:outline-none focus:ring focus:ring-lime-600 focus:ring-opacity-50"
             required
             value={input.year}
             onChange={handleInput}
           />
         </div>
         <div className="my-3 flex gap-5">
-          <label htmlFor="rating" className="w-40">
+          <label htmlFor="rating" className="w-52 p-2">
             Enter Rating
           </label>
           <input
-            className="w-72 rounded-sm border-2 border-gray-500 focus:border-green-600 focus:outline-none focus:ring focus:ring-lime-600 focus:ring-opacity-50"
+            className="w-80 rounded-sm border-2 border-gray-500 focus:border-green-600 focus:outline-none focus:ring focus:ring-lime-600 focus:ring-opacity-50"
             type="number"
             id="rating"
             name="rating"
@@ -168,12 +171,12 @@ function InsertBook() {
           />
         </div>
         <div className="my-3 flex gap-5">
-          <label htmlFor="pages" className="w-40">
+          <label htmlFor="pages" className="w-52 p-2">
             Enter Language
           </label>
           <input
             type="text"
-            className="w-72 rounded-sm border-2 border-gray-500 focus:border-green-600 focus:outline-none focus:ring focus:ring-lime-600 focus:ring-opacity-50"
+            className="w-80 rounded-sm border-2 border-gray-500 focus:border-green-600 focus:outline-none focus:ring focus:ring-lime-600 focus:ring-opacity-50"
             id="language"
             name="language"
             required
@@ -182,11 +185,11 @@ function InsertBook() {
           />
         </div>
         <div className="my-3 flex gap-5">
-          <label htmlFor="category" className="w-40">
+          <label htmlFor="category" className="w-52 p-2">
             Choose Category
           </label>
           <select
-            className="w-72 rounded-sm border-2 border-gray-500 focus:border-green-600 focus:outline-none focus:ring focus:ring-lime-600 focus:ring-opacity-50"
+            className="w-80 rounded-sm border-2 border-gray-500 focus:border-green-600 focus:outline-none focus:ring focus:ring-lime-600 focus:ring-opacity-50"
             id="category"
             name="category"
             value={input.category}
@@ -201,17 +204,17 @@ function InsertBook() {
           </select>
         </div>
         <div className="my-3 flex gap-5">
-          <label htmlFor="binding" className="w-40">
+          <label htmlFor="binding" className="w-52 p-2">
             Choose Binding
           </label>
           <select
-            className="w-72 rounded-sm border-2 border-gray-500 focus:border-green-600 focus:outline-none focus:ring focus:ring-lime-600 focus:ring-opacity-50"
+            className="w-80 rounded-sm border-2 border-gray-500 focus:border-green-600 focus:outline-none focus:ring focus:ring-lime-600 focus:ring-opacity-50"
             id="binding"
             name="binding"
             value={input.binding}
             onChange={handleInput}
           >
-            <option value="">Options</option>
+            <option value="">Binding Type</option>
             {bookBinding.map((option, index) => (
               <option key={index} value={option}>
                 {option}
@@ -220,28 +223,28 @@ function InsertBook() {
           </select>
         </div>
         <div className="my-3 flex gap-5">
-          <label htmlFor="price" className="w-40">
+          <label htmlFor="price" className="w-52 p-2">
             Enter Price
           </label>
           <input
             type="number"
             id="price"
             name="price"
-            className="w-72 rounded-sm border-2 border-gray-500 focus:border-green-600 focus:outline-none focus:ring focus:ring-lime-600 focus:ring-opacity-50"
+            className="w-80 rounded-sm border-2 border-gray-500 focus:border-green-600 focus:outline-none focus:ring focus:ring-lime-600 focus:ring-opacity-50"
             required
             value={input.price}
             onChange={handleInput}
           />
         </div>
         <div className="my-3 flex gap-5">
-          <label htmlFor="discount" className="w-40">
+          <label htmlFor="discount" className="w-52 p-2">
             Enter Discount(if any)
           </label>
           <input
             type="number"
             id="discount"
             name="discount"
-            className="w-72 rounded-sm border-2 border-gray-500 focus:border-green-600 focus:outline-none focus:ring focus:ring-lime-600 focus:ring-opacity-50"
+            className="w-80 rounded-sm border-2 border-gray-500 focus:border-green-600 focus:outline-none focus:ring focus:ring-lime-600 focus:ring-opacity-50"
             required
             value={input.discount}
             onChange={handleInput}
@@ -249,13 +252,13 @@ function InsertBook() {
         </div>
         <div>
           <div className="my-3 flex gap-5">
-            <label htmlFor="description" className="w-40">
+            <label htmlFor="description" className="w-52 p-2">
               Enter a Description
             </label>
             <textarea
               id="description"
               name="description"
-              className="w-72 rounded-sm border-2 border-gray-500 focus:border-green-600 focus:outline-none focus:ring focus:ring-lime-600 focus:ring-opacity-50"
+              className="w-80 rounded-sm border-2 border-gray-500 focus:border-green-600 focus:outline-none focus:ring focus:ring-lime-600 focus:ring-opacity-50"
               rows="3"
               cols="60"
               value={input.description}
@@ -263,11 +266,11 @@ function InsertBook() {
             ></textarea>
           </div>
           <div className="my-3 flex gap-5">
-            <label htmlFor="img" className="w-40">
+            <label htmlFor="img" className="w-52 p-2">
               Add Image
             </label>
             <input
-              className="border-1 w-72 bg-slate-200 text-sm text-stone-700 file:mr-5 file:border-2 file:bg-emerald-500 file:px-5 file:text-emerald-600 hover:file:cursor-pointer focus:border-green-600"
+              className="border-1 w-80 bg-slate-200 text-sm text-stone-700 file:mr-5 file:border-2 file:bg-emerald-500 file:px-5 file:text-emerald-600 hover:file:cursor-pointer focus:border-green-600"
               id="img"
               name="img"
               type="file"
@@ -276,7 +279,7 @@ function InsertBook() {
           </div>
           <button
             type="submit"
-            className="rounded-md bg-emerald-600 px-3.5 py-2 font-medium text-slate-50 hover:text-slate-100 hover:shadow-xl"
+            className="my-6 rounded-md bg-emerald-600 px-3.5 py-2 font-medium text-slate-50 hover:text-slate-100 hover:shadow-xl"
             onClick={handleSubmit}
           >
             Add to Database

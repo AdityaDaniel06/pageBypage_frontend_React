@@ -101,9 +101,9 @@ function Header() {
             <li className="cursor-pointer text-lg font-medium transition hover:text-emerald-800">
               <NavLink to="newarrival">New Arrival</NavLink>
             </li>
-            <li className="cursor-pointer text-lg font-medium transition hover:text-emerald-800">
+            {/* <li className="cursor-pointer text-lg font-medium transition hover:text-emerald-800">
               <NavLink to="ebooks">E-Books</NavLink>
-            </li>
+            </li> */}
             <li className="cursor-pointer text-lg font-medium transition hover:text-emerald-800">
               <NavLink to="stationary"> Stationary & Gifts</NavLink>
             </li>
