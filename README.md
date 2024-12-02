@@ -9,3 +9,6 @@ Currently, two official plugins are available:
 
 - ![image](https://github.com/user-attachments/assets/ed003e1a-3948-45c4-a785-77373846b675)
 
+- ![image](https://github.com/user-attachments/assets/4c770ae2-f2d5-4a07-b950-01ae2dd9cda4)
+
+
