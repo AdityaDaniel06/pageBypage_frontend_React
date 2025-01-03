@@ -4,9 +4,9 @@ import PopularCollection from "./PopularCollection";
 function DisplayProduct() {
   return (
     <>
-      <PopularCollection />
+      <PopularCollection limit={5} />
       <BookCategory />
-      <PopularCollection />
+      <PopularCollection limit={5} />
     </>
   );
 }

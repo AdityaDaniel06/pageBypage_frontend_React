@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import { useState } from "react";
 import axios from "axios";
+import { message } from "antd";
 import Loader from "../../utils/Loader";
 
 const booksCategory = [
@@ -56,7 +57,13 @@ function InsertBook() {
     console.log(input);
   };
   function handleImage(e) {
-    setBookImg(e.target.files[0]);
+    // setBookImg(e.target.files[0]);
+    const file = e.target.files[0];
+    if (file.size > 5 * 1024 * 1024) {
+      alert("Image size must be less than 5MB");
+      return;
+    }
+    setBookImg(file);
   }
 
   async function handleSubmit(e) {
@@ -67,30 +74,33 @@ function InsertBook() {
     formData.append("file", bookImg);
     formData.append("upload_preset", "pageBypage");
     formData.append("cloud_name", "dhqehriqv");
+
     try {
       const response = await axios.post(
         "https://api.cloudinary.com/v1_1/dhqehriqv/image/upload",
         formData,
       );
-      console.log("Cloudnary response", response);
-      if (response) {
-        setIsLoading(false);
-        let api1 = "http://localhost:8080/product/addProduct";
-        console.log("aaaaaaa", { ...input, image: response.data.url });
-        axios
-          .post(api1, { ...input, image: response.data.url })
-          .then((res) => {});
+      console.log("Cloudinary response", response);
+
+      if (response.status === 200) {
+        const api1 = "http://localhost:8080/product/addProduct";
+        const bookData = { ...input, image: response.data.url };
+
+        await axios.post(api1, bookData);
+        message.success("Book uploaded successfully!");
+
+        // Reset form fields
+        setInput({});
+        setBookImg(null);
+        document.getElementById("form").reset(); // Reset file input
       } else {
-        // setError(true);
-        setIsLoading(false);
-        console.log("aammmmmmmm", { ...input, image: response.data.url });
-        alert("Failed to upload image.");
+        message.error("Failed to upload book image.");
       }
     } catch (e) {
-      console.log(e);
+      console.error(e);
+      message.error("An error occurred while uploading.");
+    } finally {
       setIsLoading(false);
-      alert("An Error occurred while uploading");
-      return;
     }
   }
 
@@ -274,7 +284,7 @@ function InsertBook() {
               id="img"
               name="img"
               type="file"
-              onClick={handleImage}
+              onChange={handleImage}
             />
           </div>
           <button

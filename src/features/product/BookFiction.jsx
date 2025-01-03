@@ -26,9 +26,9 @@ function BookFiction() {
       <div className="flex">
         <Filter />
 
-        <div className="flex flex-grow flex-row flex-wrap">
+        <div className="flex flex-grow flex-row flex-wrap justify-around">
           {bookData.map((book) => (
-            <BookItem data={book} key={book._id} className="w-1/6" />
+            <BookItem data={book} key={book._id} className="w-1/4" />
           ))}
         </div>
       </div>
