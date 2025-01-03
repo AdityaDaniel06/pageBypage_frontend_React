@@ -2,12 +2,13 @@
 // import book01 from "../../assets/images/harrypotter1.jpg";
 
 import { useDispatch } from "react-redux";
+import { addItemToCart } from "../cart/cartSlice";
 
 function BookItem({ data }) {
   const dispatch = useDispatch();
 
   function handleAddtoCart() {
-    console.log(data);
+    // console.log("addItem", data);
     dispatch(addItemToCart({ ...data, quantity: 1 }));
   }
 

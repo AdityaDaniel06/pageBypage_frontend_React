@@ -25,6 +25,8 @@ import NewArrival from "./features/product/NewArrival";
 import Stationary from "./features/product/Stationary";
 import Boardgames from "./features/product/Boardgames";
 import LocateStore from "./features/product/LocateStore";
+import ViewCart from "./features/cart/ViewCart";
+import Checkout from "./features/cart/Checkout";
 // import PageNotFound from "./ui/PageNotFound";
 
 function App() {
@@ -46,6 +48,8 @@ function App() {
               <Route path="stationary" element={<Stationary />} />
               <Route path="boardgames" element={<Boardgames />} />
               <Route path="locatestore" element={<LocateStore />} />
+              <Route path="viewcart" element={<ViewCart />} />
+              <Route path="checkout" element={<Checkout />} />
             </Route>
           </Routes>
           <Routes>

@@ -4,8 +4,12 @@ import { FaTruckFast } from "react-icons/fa6";
 import { BsCart4 } from "react-icons/bs";
 import { RiAdminLine } from "react-icons/ri";
 import { Tooltip } from "react-tooltip";
+import { useSelector } from "react-redux";
 
 function Header() {
+  const cartData = useSelector((state) => state.cart);
+  console.log("my Cart", cartData);
+
   return (
     <>
       {/* NotificationBar */}
@@ -51,15 +55,21 @@ function Header() {
               <Tooltip id="myWish" className="bg-zinc-500" />
             </Link>
           </span>
-          <span className="cursor-pointer">
+          <span className="relative cursor-pointer">
             <Link
-              to="cart"
+              to="viewcart"
               className="hover:text-gray-300"
               data-tooltip-id="myCart"
               data-tooltip-content="My Cart"
             >
               <BsCart4 size={22} />
               <Tooltip id="myCart" className="bg-zinc-500" />
+              {/* Cart item count */}
+              {cartData.cart.length > 0 && (
+                <span className="absolute left-3 top-0 h-4 w-4 rounded-full bg-gray-600 pl-1 text-xs text-white">
+                  {cartData.cart.length}
+                </span>
+              )}
             </Link>
           </span>
           <span>
