@@ -11,7 +11,7 @@ import {
 } from "./cartSlice";
 
 function ViewCart() {
-  const cartItems = useSelector((state) => state.cart.cart || []);
+  const cartItems = useSelector((state) => state.cart.cart);
   const totalQuantity = useSelector(getTotalQuantity);
   const totalPrice = useSelector(getTotalCartPrice);
   //   console.log("Total Price", totalPrice);
