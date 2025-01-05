@@ -147,7 +147,7 @@ function ViewCart() {
           </div>
           <div className="mb-4 flex justify-between text-lg">
             <p>Shipping:</p>
-            <p className="font-semibold">₹100</p>
+            <p className="font-semibold">₹99</p>
           </div>
           <div className="mt-4 flex justify-between border-t pt-4 text-xl font-bold">
             <p>Total:</p>

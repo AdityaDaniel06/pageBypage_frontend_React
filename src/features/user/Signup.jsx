@@ -1,62 +1,83 @@
-// import { FcGoogle } from "react-icons/fc";
-// import { BsTwitterX } from "react-icons/bs";
-// import { TiSocialLinkedin } from "react-icons/ti";
-// import { FaUser } from "react-icons/fa";
 import { RiLockPasswordFill } from "react-icons/ri";
 import { MdEmail } from "react-icons/md";
+
 function Signup() {
   return (
-    <div className="mx-auto my-12 h-[440px] w-[970px] border shadow-lg shadow-slate-200 md:flex">
-      <div className="flex-1 bg-gradient-to-r from-emerald-500"></div>
-      <div className="flex-1 px-10 py-8">
-        <h2 className="text-center text-xl font-bold">Lets Get Started.</h2>
-        <p className="mb-6 text-center">Create an Account.</p>
-        {/* <div className="flex justify-center gap-8">
-          <FcGoogle className="rounded-full" size={30} />
+    <div className="mx-auto my-12 flex h-auto max-w-4xl flex-col-reverse overflow-hidden rounded-lg shadow-lg shadow-slate-300 md:flex md:h-[550px] md:flex-row">
+      {/* Left Section - Gradient */}
+      <div className="hidden flex-1 items-center justify-center bg-gradient-to-br from-emerald-400 to-emerald-600 md:flex">
+        <h2 className="px-6 text-center text-3xl font-extrabold leading-snug text-white">
+          Join Us and Explore...
+        </h2>
+      </div>
 
-          <BsTwitterX size={24} />
+      {/* Right Section - Form */}
+      <div className="flex-1 bg-white px-6 py-8 md:px-10">
+        <h2 className="text-center text-2xl font-bold text-gray-800">
+          Let’s Get Started!
+        </h2>
+        <p className="mb-6 text-center text-sm text-gray-500">
+          Create an account to access exclusive features.
+        </p>
 
-          <TiSocialLinkedin size={34} />
-        </div> */}
-        <form>
-          <div className="flex">
-            {/* <FaUser className="absolute left-0 text-emerald-700" /> */}
+        <form className="space-y-6">
+          {/* Name Fields */}
+          <div className="flex flex-col gap-4 md:flex-row">
             <input
               placeholder="First Name"
-              className="mr-5 border-b-2 text-lg focus:outline-none"
+              className="w-full flex-1 rounded-md border border-gray-300 px-4 py-2 text-sm text-gray-700 focus:border-emerald-500 focus:outline-none focus:ring-emerald-500"
             />
-            {/* <FaUser /> */}
             <input
               placeholder="Last Name"
-              className="border-b-2 text-lg focus:outline-none"
+              className="w-full flex-1 rounded-md border border-gray-300 px-4 py-2 text-sm text-gray-700 focus:border-emerald-500 focus:outline-none focus:ring-emerald-500"
             />
           </div>
-          <div className="mt-4 border-b-2">
-            <MdEmail />
+
+          {/* Email Field */}
+          <div className="relative flex items-center">
+            <MdEmail className="absolute left-3 text-emerald-500" size={20} />
             <input
               placeholder="Email Address"
-              className="text-lg focus:outline-none"
+              className="w-full rounded-md border border-gray-300 px-10 py-2 text-sm text-gray-700 focus:border-emerald-500 focus:outline-none focus:ring-emerald-500"
             />
           </div>
-          <div className="mt-4 border-b-2">
-            <RiLockPasswordFill />
+
+          {/* Password Field */}
+          <div className="relative flex items-center">
+            <RiLockPasswordFill
+              className="absolute left-3 text-emerald-500"
+              size={20}
+            />
             <input
+              type="password"
               placeholder="Password"
-              className="text-lg focus:outline-none"
+              className="w-full rounded-md border border-gray-300 px-10 py-2 text-sm text-gray-700 focus:border-emerald-500 focus:outline-none focus:ring-emerald-500"
             />
-            {/* <input placeholder="Confirm Password" /> */}
           </div>
-          <p className="mt-4 text-sm font-normal">
+
+          {/* Terms Checkbox */}
+          <div className="flex items-start space-x-2 text-sm">
             <input
               type="checkbox"
-              name="confirm"
-              className="mr-1 cursor-pointer appearance-none outline-none default:ring-emerald-500 checked:bg-emerald-500 indeterminate:bg-gray-300 focus:ring-emerald-500"
+              className="h-4 w-4 cursor-pointer rounded border-gray-300 text-emerald-500 focus:ring-emerald-500"
             />
-            I accept the terms of Use & Privacy Policy.
-          </p>
+            <label className="text-gray-600">
+              I accept the{" "}
+              <span className="cursor-pointer font-medium text-emerald-500 underline hover:text-emerald-700">
+                Terms of Use
+              </span>{" "}
+              &{" "}
+              <span className="cursor-pointer font-medium text-emerald-500 underline hover:text-emerald-700">
+                Privacy Policy
+              </span>
+              .
+            </label>
+          </div>
+
+          {/* Signup Button */}
           <button
             type="submit"
-            className="mt-4 w-full bg-emerald-500 py-2.5 text-lg font-semibold tracking-wider text-white hover:bg-emerald-700"
+            className="w-full rounded-md bg-emerald-500 px-6 py-3 text-lg font-semibold text-white shadow-md transition duration-300 hover:bg-emerald-600"
           >
             Signup
           </button>
