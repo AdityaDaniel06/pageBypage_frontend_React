@@ -35,12 +35,13 @@ export const fetchAddress = createAsyncThunk(
 );
 
 const initialState = {
-  username: "Aditya",
+  firstname: "Aditya",
   status: "idle",
   position: {},
   address: "",
   error: null,
   isAuthenticated: false,
+  isAdmin: true, // set to false before deploying
 };
 
 const userSlice = createSlice({
@@ -48,15 +49,19 @@ const userSlice = createSlice({
   initialState,
   reducers: {
     updateName(state, action) {
-      state.username = action.payload;
+      state.firstname = action.payload;
     },
     login: (state, action) => {
-      state.username = action.payload;
+      state.firstname = action.payload;
       state.isAuthenticated = true;
+      // console.log("login", state.firstname);
     },
     logout: (state) => {
-      state.username = "";
+      state.firstname = "";
       state.isAuthenticated = false;
+    },
+    updateAdmin: (state) => {
+      state.isAdmin = true;
     },
   },
   extraReducers: (builder) =>
@@ -78,6 +83,6 @@ const userSlice = createSlice({
       }),
 });
 
-export const { updateName, login, logout } = userSlice.actions;
+export const { updateName, login, logout, updateAdmin } = userSlice.actions;
 
 export default userSlice.reducer;
