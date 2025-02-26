@@ -34,12 +34,12 @@ function Login() {
         email: enteredEmail,
         password: enteredPassword,
       });
-
-      if (response.statusCode === 200) {
+      // console.log(response);
+      if (response.status === 200) {
         localStorage.setItem("token", response.data.token);
         dispatch(login(response.data.data.firstname));
         if (response.data.data.role === "user") {
-          navigate("/", { replace: true });
+          navigate("/");
         } else if (response.data.data.role === "admin") {
           dispatch(updateAdmin());
           navigate("/admin", { replace: true });

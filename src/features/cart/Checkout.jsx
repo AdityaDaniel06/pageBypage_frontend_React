@@ -7,6 +7,7 @@ import { fetchAddress } from "../user/userSlice";
 import { MdOutlineMyLocation } from "react-icons/md";
 
 function Checkout() {
+  // eslint-disable-next-line no-unused-vars
   const [orderId, setOrderId] = useState(null);
   const dispatch = useDispatch();
   const totalPrice = useSelector(getTotalCartPrice);
@@ -62,7 +63,7 @@ function Checkout() {
         email: "john.doe@example.com",
       },
       theme: {
-        color: "#3399cc",
+        color: "#4db96f",
       },
     };
 

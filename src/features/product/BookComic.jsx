@@ -8,7 +8,7 @@ function BookComic() {
     let api = "http://localhost:8080/product/showbooks/?category=Comics";
     axios.get(api).then((response) => {
       setbookData(response.data.data);
-      console.log(response.data.data);
+      // console.log(response.data.data);
     });
   };
 

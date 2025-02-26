@@ -10,8 +10,6 @@ const cartSlice = createSlice({
   initialState,
   reducers: {
     addItemToCart(state, action) {
-      console.log("add to cart called", action.payload);
-
       state.cart.push(action.payload);
       message.success("Product Added to Cart");
     },
@@ -21,8 +19,7 @@ const cartSlice = createSlice({
       state.cart = state.cart.filter((item) => item._id !== action.payload);
     },
     increaseItemQuantity(state, action) {
-      //1) find the item in the cart array & increment ,
-      // payload = id
+      //1) find the item in the cart array & increment payload = id
       const item = state.cart.find((item) => item._id === action.payload);
       item.quantity++;
       item.totalPrice = item.quantity * item.price;

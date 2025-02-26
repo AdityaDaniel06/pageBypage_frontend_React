@@ -27,7 +27,7 @@ import Boardgames from "./features/product/Boardgames";
 import LocateStore from "./features/product/LocateStore";
 import ViewCart from "./features/cart/ViewCart";
 import Checkout from "./features/cart/Checkout";
-import PageNotFound from "./ui/PageNotFound";
+// import PageNotFound from "./ui/PageNotFound";
 
 function App() {
   return (
@@ -59,7 +59,7 @@ function App() {
 
               {/* <Route path="/edit/:id" element={<EditBook />} /> */}
             </Route>
-            <Route path="*" element={<PageNotFound />} />
+            {/* <Route path="*" element={<PageNotFound />} /> */}
           </Routes>
         </Suspense>
       </BrowserRouter>
